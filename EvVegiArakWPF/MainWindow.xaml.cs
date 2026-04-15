@@ -44,6 +44,19 @@ namespace EvVegiArakWPF
         {
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Arak.Count.ToString());
+            var aru = adatgrid.SelectedItem as Arak;
+            arak.Remove(aru);
+            adatgrid.ItemsSource = arak;
+        }
+
+        private void adatgrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 
     class Arak
